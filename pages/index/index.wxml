@@ -4,4 +4,16 @@
     <i-icon type="coordinates" size="20" />张店区>
     <i-input value="" placeholder="满20-15" />
   </view>
+  <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
+      <swiper-item>
+        <i-row wx:for="{{iconList}}">
+          <i-col span="8" i-class="col-class">{{item.name}}</i-col>
+        </i-row>
+      </swiper-item>
+      <swiper-item>
+        <view>222</view>
+      </swiper-item>
+    </swiper>
+  </view>
 </view>

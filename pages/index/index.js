@@ -7,7 +7,23 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    iconList: [
+      { "iconName": "activity", "name": "美食","color":""},
+      { "iconName": "brush", "name": "超市便利", "color": ""},
+      { "iconName": "computer", "name": "水果", "color": "" },
+      //{ "iconName": "browse", "name": "水果", "color": "" },
+      //{ "iconName": "collection", "name": "专送", "color": "" },
+      // { "iconName": "emoji", "name": "甜点饮品", "color": "" },
+      // { "iconName": "integral", "name": "优选", "color": "" },
+      // { "iconName": "homepage", "name": "家常菜", "color": "" },
+      // { "iconName": "picture", "name": "小吃馆", "color": "" },
+      // { "iconName": "remind", "name": "减免配送费", "color": "" },
+      // { "iconName": "group", "name": "品牌连锁", "color": "" }
+    ],
+    indicatorDots: true,
+    indicatorActiveColor:'orange',
+    duration: 1000
   },
   //事件处理函数
   bindViewTap: function() {
