@@ -2,6 +2,6 @@
 <view class="container">
   <view class="header">
     <i-icon type="coordinates" size="20" />张店区>
-    <i-input value="" placeholder="满20-15" />
+    <i-input class='search' value="" placeholder="满20-15" />
   </view>
 </view>
