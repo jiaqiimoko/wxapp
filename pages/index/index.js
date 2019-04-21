@@ -8,18 +8,29 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    iconList: [
+    iconList1: [
       { "iconName": "activity", "name": "美食","color":""},
       { "iconName": "brush", "name": "超市便利", "color": ""},
       { "iconName": "computer", "name": "水果", "color": "" },
-      //{ "iconName": "browse", "name": "水果", "color": "" },
-      //{ "iconName": "collection", "name": "专送", "color": "" },
-      // { "iconName": "emoji", "name": "甜点饮品", "color": "" },
-      // { "iconName": "integral", "name": "优选", "color": "" },
-      // { "iconName": "homepage", "name": "家常菜", "color": "" },
-      // { "iconName": "picture", "name": "小吃馆", "color": "" },
-      // { "iconName": "remind", "name": "减免配送费", "color": "" },
-      // { "iconName": "group", "name": "品牌连锁", "color": "" }
+      { "iconName": "collection", "name": "专送", "color": "" },
+      { "iconName": "emoji", "name": "甜点饮品", "color": "" },
+      { "iconName": "integral", "name": "优选", "color": "" },
+      { "iconName": "homepage", "name": "家常菜", "color": "" },
+      { "iconName": "picture", "name": "小吃馆", "color": "" },
+      { "iconName": "remind", "name": "减免配送费", "color": "" },
+      { "iconName": "group", "name": "品牌连锁", "color": "" }
+    ],
+    iconList2: [
+      { "iconName": "live", "name": "日韩料理", "color": "" },
+      { "iconName": "like", "name": "无辣不欢", "color": "" },
+      { "iconName": "computer", "name": "浪漫鲜花", "color": "" },
+      { "iconName": "collection", "name": "甜蜜蛋糕", "color": "" },
+      { "iconName": "emoji", "name": "暖胃粉面", "color": "" },
+      { "iconName": "praise", "name": "快餐简食", "color": "" },
+      { "iconName": "homepage", "name": "炸鸡零食", "color": "" },
+      { "iconName": "picture", "name": "送药上门", "color": "" },
+      { "iconName": "remind", "name": "包子粥铺", "color": "" },
+      { "iconName": "shop_fill", "name": "能量西餐", "color": "" }
     ],
     indicatorDots: true,
     indicatorActiveColor:'orange',

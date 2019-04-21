@@ -2,18 +2,27 @@
 <view class="container">
   <view class="header">
     <i-icon type="coordinates" size="20" />张店区>
-    <i-input class='search' value="" placeholder="满20-15" />
+    <i-input class='searchInput' value="" placeholder="满20-15" />
   </view>
   <view class="page-section page-section-spacing swiper">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
-      <swiper-item>
-        <i-row wx:for="{{iconList}}">
-          <i-col span="8" i-class="col-class">{{item.name}}</i-col>
-        </i-row>
+      <swiper-item class='swiperBox'>
+        <view class='swiperItem' wx:for="{{iconList1}}">
+          <i-icon size='30' type='{{item.iconName}}'></i-icon>
+          <view>{{item.name}}</view>
+        </view>
       </swiper-item>
-      <swiper-item>
-        <view>222</view>
+      <swiper-item class='swiperBox'>
+        <view class='swiperItem' wx:for="{{iconList2}}">
+          <i-icon size='30' type='{{item.iconName}}'></i-icon>
+          <view>{{item.name}}</view>
+        </view>
       </swiper-item>
     </swiper>
+
+
+    <scroll-view scroll-x="true" style="height: 200px;">
+      <view id="green" class="scroll-view-item" wx:for="{{iconList1}}">{{item.name}}</view>
+    </scroll-view>
   </view>
 </view>

@@ -1,4 +1,20 @@
 /**index.wxss**/
-.search{
+.searchInput{
   background-color:#F1F2F2;
+  color: red;
+}
+swiper{
+  height: 170px;
+}
+.swiperBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+.swiperBox .swiperItem{
+  width: 20%;
+  font-size: 12px;
+  text-align: center
+}
+.scroll-view-item{
+  float: left;
 }
