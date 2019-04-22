@@ -21,7 +21,9 @@
     </swiper>
 
 
-    <scroll-view scroll-x="true" style="height: 200px;">
+    <scroll-view 
+     scroll-x="true"
+     style="height: 200px;white-space: nowrap; display: flex">
       <view id="green" class="scroll-view-item" wx:for="{{iconList1}}">{{item.name}}</view>
     </scroll-view>
   </view>

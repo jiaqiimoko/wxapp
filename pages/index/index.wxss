@@ -16,5 +16,7 @@ swiper{
   text-align: center
 }
 .scroll-view-item{
-  float: left;
+  width: 200px;
+  height: 100px; 
+  display: inline-block
 }
