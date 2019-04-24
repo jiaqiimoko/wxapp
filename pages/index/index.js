@@ -34,7 +34,41 @@ Page({
     ],
     indicatorDots: true,
     indicatorActiveColor:'orange',
-    duration: 1000
+    duration: 1000,
+    imageurl1: "../../img/pic1.jpg",
+    daindex1: 0,
+    imageurl2: "../../img/pic1.jpg",
+    daindex2: 0,
+    menuList:[
+      {
+        "shopName":"快乐柠檬","picUrl":"../../img/pic1.jpg","star":"4.8","saleMonth":"1674","distance":"3.7","time":"30","sendUp":"20","fee":"0.5","perCost":"18",
+        "tage":["30减3","40减6","50减10","首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+      {
+        "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
+        "tage": ["30减3", "40减6", "50减10", "首单减9"]
+      },
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
