@@ -26,9 +26,9 @@
      style="height: 100px;white-space: nowrap; display: flex">
       <view id="green" class="scroll-view-item" wx:for="{{iconList1}}">
         <image
-          style="width: 200px; height: 80px;"
+          style="width: 270rpx; height: 120rpx;"
           mode="aspectFit"
-          src="../../img/pic1.jpg"
+          src="../../img/hualaishi.jpg"
         ></image>
         <view>{{item.name}}</view>
       </view>
@@ -39,5 +39,30 @@
     <view class='sort-btn'>综合</view>
     <view class='sort-btn' data-index="{{daindex1}}" bindtap="choosesort1">销量</view>
     <view class='sort-btn' data-index="{{daindex2}}" bindtap="choosesort2">价格</view>
+    <view class='list'>
+      <view>
+        <image mode="aspectFit" src="../../img/zhaji.jpg" class="shopPic"></image>
+        <view class="shopDetail">
+          <view class="shopName">紫燕百味鸡</view>
+          <view class='shopTr1'>
+            <i-rate class="rate" disabled="true" value="4" size="13">4.8</i-rate>
+            <view class='salemonth'>月售4730</view>
+            <view class='fr time'>37分钟</view>
+            <view class='fr distance'>3.8km</view>
+          </view>
+          <view class="shopTr2">
+            <view>起送 15</view>
+            <view>配送 1</view>
+            <view>人均 15</view>
+            <view class='fr'>美团专送</view>
+          </view>
+          <view class='shopTr3'>快餐小吃</view>
+          <view class='shopTags'>
+            <view class='shoptag'>支持自取</view>
+            <view class='shoptag'>极速退款</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

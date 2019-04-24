@@ -39,3 +39,45 @@ swiper{
   height: 18rpx;
   margin-left:6rpx;
 }
+.fl{
+  float:left !important;
+}
+.fr{
+  float:right !important;
+}
+.list{
+  width: 750rpx;
+}
+.shopPic{
+  float:left;
+  width:170rpx;
+  height:140rpx;
+}
+.shopDetail{
+  float: right;
+  width: 580rpx;
+}
+.shopName{
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.shopTr1,.shopTr2,.shopTr3{
+  width: 550rpx;
+  /* height: 30px; */
+  overflow: hidden;
+}
+.shopTr1>view,.shopTr2>view,.shopTr3,.shopTags>.shoptag{
+  font-size: 13px;
+  /* height: 28px; */
+  float: left;
+  line-height: 28px;
+  margin-left: 5px
+}
+.rate{
+  margin-top: -3px;
+  float: left;
+}
+.i-rate-star{
+  margin-left: 0px;
+}
