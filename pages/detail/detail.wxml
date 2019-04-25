@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+<view class='clearfix'>
+  <image mode="aspectFit" src="../../img/zhaji.jpg" class="shopPic"></image>
+  <view class="shopDetail">
+    <view class='shopTr1'>
+      <view class='fr time'>配送37分钟</view>
+      <view class='fr distance'>极速退款</view>
+    </view>
+    <view class="shopTr2">
+      <view>公告：火遍吃货朋友圈的鲜汁道龙虾饭，来淄...</view>
+    </view>
+    <view class='shopTr3'>20-11 40-15 60-25</view>
+  </view>
+</view>

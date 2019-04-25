@@ -30,20 +30,20 @@
           mode="aspectFit"
           src="../../img/hualaishi.jpg"
         ></image>
-        <view>{{item.name}}</view>
+        <!-- <view>{{item.name}}</view> -->
       </view>
     </scroll-view>
   </view>
 
   <view class='sort-wrap'>
-    <view class='sort-btn'>综合</view>
-    <view class='sort-btn' data-index="{{daindex1}}" bindtap="choosesort1">销量</view>
-    <view class='sort-btn' data-index="{{daindex2}}" bindtap="choosesort2">价格</view>
+    <view class="sort-btn {{menuFixed ? 'fixed': ''}}">综合</view>
+    <view class="sort-btn {{menuFixed ? 'fixed': ''}}" data-index="{{daindex1}}" bindtap="choosesort1">销量</view>
+    <view class="sort-btn {{menuFixed ? 'fixed': ''}}" data-index="{{daindex2}}" bindtap="choosesort2">价格</view>
     <view class='list'>
-      <view>
+      <navigator url="../detail/detail?shopname={{item.shopName}}" class='clearfix' wx:for="{{menuList}}">
         <image mode="aspectFit" src="../../img/zhaji.jpg" class="shopPic"></image>
         <view class="shopDetail">
-          <view class="shopName">紫燕百味鸡</view>
+          <view class="shopName">{{item.shopName}}</view>
           <view class='shopTr1'>
             <i-rate class="rate" disabled="true" value="4" size="13">4.8</i-rate>
             <view class='salemonth'>月售4730</view>
@@ -62,7 +62,7 @@
             <view class='shoptag'>极速退款</view>
           </view>
         </view>
-      </view>
+      </navigator>
     </view>
   </view>
 </view>

@@ -1,0 +1,18 @@
+.shopPic {
+  float: left;
+  width: 170rpx;
+  height: 140rpx;
+}
+.shopTr1, .shopTr2, .shopTr3 {
+  width: 550rpx;
+  /* height: 30px; */
+  overflow: hidden;
+}
+
+.shopTr1>view, .shopTr2>view, .shopTr3, .shopTags>.shoptag {
+  font-size: 11px;
+  /* height: 28px; */
+  float: left;
+  line-height: 20px;
+  /* margin-left: 5px; */
+}

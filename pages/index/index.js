@@ -68,7 +68,8 @@ Page({
         "shopName": "快乐柠檬", "picUrl": "../../img/pic1.jpg", "star": "4.8", "saleMonth": "1674", "distance": "3.7", "time": "30", "sendUp": "20", "fee": "0.5", "perCost": "18",
         "tage": ["30减3", "40减6", "50减10", "首单减9"]
       },
-    ]
+    ],
+    menuFixed:false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -111,5 +112,31 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onShow: function () {
+    var that = this;
+    var query = wx.createSelectorQuery()//创建节点查询器 query
+    query.select('.sort-btn').boundingClientRect()//这段代码的意思是选择Id= the - id的节点，获取节点位置信息的查询请求
+    query.exec(function (res) {
+      // console.log(res[0].top); // #affix节点的上边界坐
+      that.setData({
+        menuTop: res[0].top
+      })
+    });
+  },
+  // 2.监听页面滚动距离scrollTop
+  onPageScroll: function (e) {
+    // console.log(e.scrollTop);
+    var that = this;
+    // 3.当页面滚动距离scrollTop > menuTop菜单栏距离文档顶部的距离时，菜单栏固定定位
+    if (e.scrollTop > that.data.menuTop) {
+      that.setData({
+        menuFixed: true
+      })
+    } else {
+      that.setData({
+        menuFixed: false
+      })
+    }
   }
 })
