@@ -1,5 +1,5 @@
 <!--pages/detail/detail.wxml-->
-<view class='clearfix'>
+<view class='clearfix head'>
   <image mode="aspectFit" src="../../img/zhaji.jpg" class="shopPic"></image>
   <view class="shopDetail">
     <view class='shopTr1'>
@@ -12,3 +12,12 @@
     <view class='shopTr3'>20-11 40-15 60-25</view>
   </view>
 </view>
+
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="tab1" title="选项1"></i-tab>
+    <i-tab key="tab2" title="选项2"></i-tab>
+    <i-tab key="tab3" title="选项3"></i-tab>
+</i-tabs>
+<view class='tab1' hidden='{{tab1}}'>content1</view>
+<view class='tab2' hidden='{{tab2}}'>content2</view>
+<view class='tab3' hidden='{{tab3}}'>content3</view>

@@ -1,3 +1,16 @@
+.clearfix{
+  zoom: 1;
+}
+.clearfix::after{
+  content: "";
+  display: inline-block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+.head{
+  background: #E6849D;
+}
 .shopPic {
   float: left;
   width: 170rpx;
@@ -7,6 +20,7 @@
   width: 550rpx;
   /* height: 30px; */
   overflow: hidden;
+  color: #FFFFFF;
 }
 
 .shopTr1>view, .shopTr2>view, .shopTr3, .shopTags>.shoptag {

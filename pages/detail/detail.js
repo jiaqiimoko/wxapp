@@ -7,9 +7,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    current: 'tab1',
+    tab1: false,
+    tab2: true,
+    tab3: true,
   },
-
+  handleChange({ detail }) {
+    console.log(detail)
+    this.setData({
+      current: detail.key
+    });
+    switch (detail.key){
+      case "tab1":
+        this.setData({
+          tab1: false ,
+          tab2: true,
+          tab3: true 
+        })
+        break;
+      case "tab2":
+        this.setData({
+          tab1: true,
+          tab2: false,
+          tab3: true
+        })
+        break;
+      case "tab3":
+        this.setData({
+          tab1: true,
+          tab2: true,
+          tab3: false
+        })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
