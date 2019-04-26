@@ -49,27 +49,6 @@ swiper {
   height: 18rpx;
   margin-left: 6rpx;
 }
-
-.fl {
-  float: left !important;
-}
-
-.fr {
-  float: right !important;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:after {
-  display: block;
-  clear: both;
-  content: "";
-  visibility: hidden;
-  height: 0;
-}
-
 .list {
   width: 750rpx;
 }

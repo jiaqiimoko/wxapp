@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="header">
-    <i-icon type="coordinates" size="20" />张店区>
+    <i-icon type="coordinates" size="20" />{{address}}>
     <i-input class='searchInput' value="" placeholder="满20-15" />
   </view>
   <view class="page-section page-section-spacing swiper">

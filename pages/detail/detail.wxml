@@ -14,10 +14,21 @@
 </view>
 
 <i-tabs current="{{ current }}" bindchange="handleChange">
-    <i-tab key="tab1" title="选项1"></i-tab>
-    <i-tab key="tab2" title="选项2"></i-tab>
-    <i-tab key="tab3" title="选项3"></i-tab>
+  <i-tab key="tab1" title="选项1"></i-tab>
+  <i-tab key="tab2" title="选项2"></i-tab>
+  <i-tab key="tab3" title="选项3"></i-tab>
 </i-tabs>
-<view class='tab1' hidden='{{tab1}}'>content1</view>
+<view class='tab1' hidden='{{tab1}}'>
+  <scroll-view scroll-y='true' class='leftMenu'>
+    <block wx:for="{{menuList}}" wx:key="list">
+      <view class='menuItem' bindtap='clickScroll' data-id="{{item.id}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view scroll-y='true' class='rightContent'>
+    <block wx:for="{{menuList}}" wx:key="list">
+      <view class='menuContent' bindtap='clickScroll' data-id="{{item.id}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>
 <view class='tab2' hidden='{{tab2}}'>content2</view>
 <view class='tab3' hidden='{{tab3}}'>content3</view>

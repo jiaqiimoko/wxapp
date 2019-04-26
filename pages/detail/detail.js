@@ -11,6 +11,10 @@ Page({
     tab1: false,
     tab2: true,
     tab3: true,
+    menuList: [
+      { "name": "热销", "id": "1" }, { "name": "热销", "id": "2" }, { "name": "热销", "id": "3" }, { "name": "热销", "id": "4" }, { "name": "热销", "id": "5" }, { "name": "热销", "id": "6" },
+      { "name": "热销", "id": "1" }, { "name": "热销", "id": "2" }, { "name": "热销", "id": "3" }, { "name": "热销", "id": "4" }, { "name": "热销", "id": "5" }, { "name": "热销", "id": "6" }
+      ]
   },
   handleChange({ detail }) {
     console.log(detail)

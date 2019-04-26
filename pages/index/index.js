@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var QQMapWX = require('qqmap-wx-jssdk.js');
 
 Page({
   data: {
@@ -69,7 +70,8 @@ Page({
         "tage": ["30减3", "40减6", "50减10", "首单减9"]
       },
     ],
-    menuFixed:false
+    menuFixed:false,
+    address:"获取位置"
   },
   //事件处理函数
   bindViewTap: function() {
@@ -123,8 +125,35 @@ Page({
         menuTop: res[0].top
       })
     });
+
+
+    var qqmapsdk = new QQMapWX({
+      key: 'DSXBZ-GLFCW-Y6BRM-RVQ5X-SNVMV-4HFNK' // 必填
+    });
+    // 获取位置
+    wx.getLocation({ //小程序 的获取当前的位置经纬度 
+      type: 'wgs84',
+      success(res) {
+        that.setData({//给经纬度赋个值吧
+          curLat: res.latitude,
+          curLon: res.longitude
+        })
+        qqmapsdk.reverseGeocoder({ //腾讯的地图的接口 经纬度查位置 //并没有很精确
+          location: {
+            latitude: res.latitude,
+            longitude: res.longitude
+          },
+          success: function (addressRes) {
+            // 设置address
+            that.setData({
+              address: addressRes.result.formatted_addresses.recommend,
+            })
+          }
+        })
+      }
+    })
   },
-  // 2.监听页面滚动距离scrollTop
+  // 监听页面滚动距离scrollTop
   onPageScroll: function (e) {
     // console.log(e.scrollTop);
     var that = this;
