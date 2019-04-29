@@ -26,8 +26,8 @@
      style="height: 100px;white-space: nowrap; display: flex">
       <view id="green" class="scroll-view-item" wx:for="{{imgList}}">
         <image
-          style="width: 270rpx; height: 120rpx;"
-          mode="aspectFit"
+          style="width: 270rpx; height: 160rpx;"
+          mode="aspectFill"
           src="{{item}}"
         ></image>
         <!-- <view>{{item.name}}</view> -->
