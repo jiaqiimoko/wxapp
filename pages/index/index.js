@@ -33,6 +33,14 @@ Page({
       { "iconName": "remind", "name": "包子粥铺", "color": "" },
       { "iconName": "shop_fill", "name": "能量西餐", "color": "" }
     ],
+    imgList:[
+      "../../img/hualaishi.jpg",
+      "../../img/lixiansheng.png",
+      "../../img/qingfeng.jpg",
+      "../../img/xiashisan.jpg",
+      "../../img/zhaji.jpg",
+      "../../img/zhangliang.jpg",
+    ],
     indicatorDots: true,
     indicatorActiveColor:'orange',
     duration: 1000,

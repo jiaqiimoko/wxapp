@@ -24,11 +24,11 @@
     <scroll-view 
      scroll-x="true"
      style="height: 100px;white-space: nowrap; display: flex">
-      <view id="green" class="scroll-view-item" wx:for="{{iconList1}}">
+      <view id="green" class="scroll-view-item" wx:for="{{imgList}}">
         <image
           style="width: 270rpx; height: 120rpx;"
           mode="aspectFit"
-          src="../../img/hualaishi.jpg"
+          src="{{item}}"
         ></image>
         <!-- <view>{{item.name}}</view> -->
       </view>
