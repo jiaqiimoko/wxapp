@@ -40,3 +40,12 @@
   height: 150px;
   background-color: #FFFFFF;
 }
+.gBtn{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background-color: #FEF200;
+  border-radius: 13px;
+  font-size: 25px;
+}

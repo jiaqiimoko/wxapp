@@ -21,13 +21,27 @@
 <view class='tab1' hidden='{{tab1}}'>
   <scroll-view scroll-y='true' class='leftMenu'>
     <block wx:for="{{menuList}}" wx:key="list">
-      <view class='menuItem' bindtap='clickScroll' data-id="{{item.id}}">{{item.name}}</view>
+      <view class='menuItem' bindtap='clickScroll' data-id="{{'go'+item.id}}">{{item.name}}</view>
     </block>
   </scroll-view>
-  <scroll-view scroll-y='true' class='rightContent'>
+  <scroll-view scroll-y='true' scroll-into-view="{{toView}}" scrollTop="{{scrollTop}}" class='rightContent'>
     <block wx:for="{{menuList}}" wx:key="list">
-      <view class='menuContent' bindtap='clickScroll' data-id="{{item.id}}">{{item.name}}</view>
-    </block>
+      <view id="{{'to'+item.id}}" >
+        <view>{{item.name}}</view>
+        <view class='menuContent' wx:for="{{item.cList}}">
+          <image mode="aspectFit" src="../../img/zhaji.jpg" class="shopPic"></image>
+          <view class='goods'>
+            <view class="goodName">{{item.name}}</view>
+            <view class="goodName">{{item.price}}</view>
+            <view>
+              <view class='fr gBtn' data-number="{{item.number}}" data-name="{{item.name}}" data-price="{{item.price}}" bindtap='addCar'>+</view>
+              <view  wx:if="{{item.count > 0}}" class='fr'>{{item.count}}</view>
+              <view  wx:if="{{item.count > 0}}" class='fr gBtn'>-</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block> 
   </scroll-view>
 </view>
 <view class='tab2' hidden='{{tab2}}'>content2</view>

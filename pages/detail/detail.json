@@ -6,6 +6,8 @@
   "backgroundTextStyle": "light",
   "usingComponents": {
     "i-tabs": "../../dist/tabs/index",
-    "i-tab": "../../dist/tab/index"
+    "i-tab": "../../dist/tab/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index"
   }
 }
