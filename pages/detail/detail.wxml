@@ -9,7 +9,7 @@
     <view class="shopTr2">
       <view>公告：火遍吃货朋友圈的鲜汁道龙虾饭，来淄...</view>
     </view>
-    <view class='shopTr3'>20-11 40-15 60-25</view>
+    <view class='shopTr3'>20减11 40减15 60减25</view>
   </view>
 </view>
 
@@ -35,14 +35,18 @@
             <view class="goodName">{{item.price}}</view>
             <view>
               <view class='fr gBtn' data-number="{{item.number}}" data-name="{{item.name}}" data-price="{{item.price}}" bindtap='addCar'>+</view>
-              <view  wx:if="{{item.count > 0}}" class='fr'>{{item.count}}</view>
-              <view  wx:if="{{item.count > 0}}" class='fr gBtn'>-</view>
+              <view  wx:if="{{item.count > 0}}" class='fr' style="width:30px;text-align:center;">{{item.count}}</view>
+              <view  wx:if="{{item.count > 0}}" data-number="{{item.number}}" data-name="{{item.name}}" data-price="{{item.price}}" class='fr gBtn' style="background:#F6F8F8" bindtap="subCar">-</view>
             </view>
           </view>
         </view>
       </view>
     </block> 
   </scroll-view>
+  <view class='bottomTab'>
+    <view class='fl'>购物车</view>
+    <view class='fr'>0元起送</view>
+  </view>
 </view>
 <view class='tab2' hidden='{{tab2}}'>content2</view>
 <view class='tab3' hidden='{{tab3}}'>content3</view>

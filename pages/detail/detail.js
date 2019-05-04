@@ -135,9 +135,13 @@ Page({
     }
     var menuList = this.data.menuList;
     for (var j = 0; j < menuList.length; j++) {
-      if (menuList[i].number == number) {
-        menuList[i].count++;
-        break;
+      if(menuList[j].cList){
+        for (var k = 0; k < menuList[j].cList.length; k++){
+          if (menuList[j].cList[k].number == number) {
+            menuList[j].cList[k].count++;
+            break;
+          }
+        }
       }
     }
     if (flag) {
@@ -146,5 +150,30 @@ Page({
     }
     console.log(menuList);
     this.setData({ carList, menuList})
+  },
+  subCar(event) {
+    var number = event.currentTarget.dataset.number;
+    var name = event.currentTarget.dataset.name;
+    var price = event.currentTarget.dataset.price;
+    var carList = this.data.carList;
+    var menuList = this.data.menuList;
+    for (var i = 0; i < carList.length; i++) {
+      if (carList[i].number == number) {
+        carList[i].count--;
+        break;
+      }
+    }
+    for (var j = 0; j < menuList.length; j++) {
+      if (menuList[j].cList) {
+        for (var k = 0; k < menuList[j].cList.length; k++) {
+          if (menuList[j].cList[k].number == number) {
+            menuList[j].cList[k].count--;
+            break;
+          }
+        }
+      }
+    }
+    console.log(menuList);
+    this.setData({ carList, menuList })
   }
 })
