@@ -2,7 +2,10 @@
 
 .searchInput {
   background-color: #f1f2f2;
-  color: red;
+  margin: 3px 10px;
+  padding-left: 8px;
+  font-size: 15px;
+  line-height: 23px;
 }
 
 swiper {

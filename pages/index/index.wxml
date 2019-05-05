@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class="header">
-    <i-icon type="coordinates" size="20" />{{address}}>
-    <i-input class='searchInput' value="" placeholder="满20-15" />
+    <i-icon type="coordinates" size="20" /><span style="font-size:18px;">{{address}}></span>
+    <input class='searchInput' placeholder="满20-15" />
   </view>
   <view class="page-section page-section-spacing swiper">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
@@ -23,7 +23,7 @@
 
     <scroll-view 
      scroll-x="true"
-     style="height: 100px;white-space: nowrap; display: flex">
+     style="height: 100px;white-space: nowrap; display: flex;margin:0 10px;">
       <view id="green" class="scroll-view-item" wx:for="{{imgList}}">
         <image
           style="width: 270rpx; height: 160rpx;"
