@@ -44,8 +44,11 @@
     </block> 
   </scroll-view>
   <view class='bottomTab'>
-    <view class='fl'>购物车</view>
-    <view class='fr'>0元起送</view>
+    <view class='fl carBtn' bindtap='showCar'>购物车</view>
+    <view class='fr costBtn'>0元起送</view>
+  </view>
+  <view class='carView' hidden='{{hideCar}}'>
+    购物车
   </view>
 </view>
 <view class='tab2' hidden='{{tab2}}'>content2</view>
