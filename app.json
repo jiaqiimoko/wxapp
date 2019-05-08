@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "狗P外卖",
+    "navigationBarTitleText": "外卖小程序",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

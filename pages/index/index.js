@@ -35,11 +35,11 @@ Page({
     ],
     imgList:[
       "../../img/hualaishi.jpg",
+      "../../img/zhaji.jpg",
+      "../../img/zhangliang.jpg",
       "../../img/lixiansheng.png",
       "../../img/qingfeng.jpg",
       "../../img/xiashisan.jpg",
-      "../../img/zhaji.jpg",
-      "../../img/zhangliang.jpg",
     ],
     indicatorDots: true,
     indicatorActiveColor:'orange',
