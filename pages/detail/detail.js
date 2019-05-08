@@ -70,7 +70,8 @@ Page({
       ]}
     ],
     toView:"3",
-    carList:[{"name": "", "price": "", "number": "", "count": ""}]
+    carList:[{"name": "", "price": "", "number": "", "count": ""}],
+    hideCar:true
   },
   // 左侧菜单点击事件
   clickScroll(event){
@@ -175,5 +176,11 @@ Page({
     }
     console.log(menuList);
     this.setData({ carList, menuList })
+  },
+  // 打开购物车
+  showCar(){
+    var flag = this.data.hideCar;
+    flag = !flag;
+    this.setData({hideCar:flag});
   }
 })

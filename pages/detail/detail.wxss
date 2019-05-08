@@ -1,5 +1,5 @@
 .head{
-  background: #E6849D;
+  background: #333333;
 }
 .shopPic {
   float: left;
@@ -50,11 +50,27 @@
   font-size: 25px;
 }
 .bottomTab{
-  background: #E6849D;
+  background: #333333;
   text-align: left;
-  height: 60px;
+  height: 45px;
   width: 100%;
   color: #777777;
   position: fixed;
   bottom: 0;
+}
+.carView{
+  position: relative;
+  width: 100%;
+  height: calc(100% - 50px);
+  background: rgba(0, 0, 0, 0.3);
+}
+.costBtn{
+  background: #F8D373;
+  width: 30%;
+  color: #333333;
+  line-height: 45px;
+  text-align: center;
+}
+.carBtn{
+  line-height: 45px;
 }
