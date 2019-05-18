@@ -42,13 +42,15 @@
         </view>
       </view>
     </block> 
-  </scroll-view>
+  </scroll-view>  
+  <view class='carView' hidden='{{hideCar}}'>
+    <block wx:for="{{carList}}">
+      <view>{{item.name}}  数量：{{item.count}}</view>
+    </block>
+  </view>
   <view class='bottomTab'>
     <view class='fl carBtn' bindtap='showCar'>购物车</view>
-    <view class='fr costBtn'>0元起送</view>
-  </view>
-  <view class='carView' hidden='{{hideCar}}'>
-    购物车
+    <view class='fr costBtn'>{{total}}元</view>
   </view>
 </view>
 <view class='tab2' hidden='{{tab2}}'>content2</view>

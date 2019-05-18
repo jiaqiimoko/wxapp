@@ -70,8 +70,9 @@ Page({
       ]}
     ],
     toView:"3",
-    carList:[{"name": "", "price": "", "number": "", "count": ""}],
-    hideCar:true
+    carList:[],
+    hideCar:true,
+    total:0
   },
   // 左侧菜单点击事件
   clickScroll(event){
@@ -80,11 +81,6 @@ Page({
     console.log(id);
     this.setData({toView:id});
   },
-  // onPageScroll(event) {
-  //   this.setData({
-  //     scrollTop: event.scrollTop
-  //   })
-  // },
   // 设置标题
   onLoad: function (options) {
     wx.setNavigationBarTitle({
@@ -126,8 +122,9 @@ Page({
     var name = event.currentTarget.dataset.name;
     var price = event.currentTarget.dataset.price;
     var carList = this.data.carList;
+    var total = this.data.total;
     var flag = true;
-    for(var i = 0; i < carList.length; i++){
+    for (var i = 0; i < carList.length; i++) {
       if (carList[i].number == number) {
         carList[i].count++;
         flag = false;
@@ -139,6 +136,7 @@ Page({
       if(menuList[j].cList){
         for (var k = 0; k < menuList[j].cList.length; k++){
           if (menuList[j].cList[k].number == number) {
+            total = total * 1 + menuList[j].cList[k].price * 1;
             menuList[j].cList[k].count++;
             break;
           }
@@ -149,8 +147,8 @@ Page({
       var o = { "name": name, "price": price, "number": number, "count": "1" }
       carList.push(o);
     }
-    console.log(menuList);
-    this.setData({ carList, menuList})
+    console.log(total);
+    this.setData({ carList, menuList,total})
   },
   subCar(event) {
     var number = event.currentTarget.dataset.number;
@@ -158,6 +156,7 @@ Page({
     var price = event.currentTarget.dataset.price;
     var carList = this.data.carList;
     var menuList = this.data.menuList;
+    var total = this.data.total;
     for (var i = 0; i < carList.length; i++) {
       if (carList[i].number == number) {
         carList[i].count--;
@@ -168,19 +167,24 @@ Page({
       if (menuList[j].cList) {
         for (var k = 0; k < menuList[j].cList.length; k++) {
           if (menuList[j].cList[k].number == number) {
+            total = total * 1 - menuList[j].cList[k].price * 1;
             menuList[j].cList[k].count--;
             break;
           }
         }
       }
     }
-    console.log(menuList);
-    this.setData({ carList, menuList })
+    console.log(total);
+    this.setData({ carList, menuList,total })
   },
   // 打开购物车
   showCar(){
     var flag = this.data.hideCar;
     flag = !flag;
     this.setData({hideCar:flag});
+    var carList = this.data.carList;
+    for (var j = 0; j < carList.length; j++) {
+      console.log(carList[j])
+    }
   }
 })
